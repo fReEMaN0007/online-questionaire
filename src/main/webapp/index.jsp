@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<link href="<c:url value="webapp/styles.css" />" rel="stylesheet">
+<link href="<c:url value="resources/css/styles.css" />" rel="stylesheet">
 
 <meta charset="ISO-8859-1">
 <title>Online Survey</title>
