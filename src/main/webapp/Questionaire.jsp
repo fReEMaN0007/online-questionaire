@@ -4,17 +4,26 @@
 <html>
 <head>
     <link href="<c:url value="resources/css/styles.css" />" rel="stylesheet">
+    <script src="<c:url value="/resources/js/script.js" />"></script>
 <meta charset="ISO-8859-1">
 <title>Online Survey</title>
 </head>
 
 <body>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.HashMap"%>
+<%! HashMap<String, HashMap<String,ArrayList<String>>>  questions;%>
+
+		
+
     <div class="mainCon">
-        <div class="title">
+        <div class="title" id="titleHead">
            ${subject}
         </div>
-        <div class="question">
-       	  ${question}
+        <div class="question" id="qustionHead">
+        	<div class="questionAni" id="question1"> ${king["ina"]}</div>
+		 	<div class="questionAni" id="question2" style="display:none">${questions["What is?"]["ans1"][0]}</div>
+		    
         </div>
         <div class="choices">
         	<div class="choice" id="choiceA">
@@ -34,12 +43,24 @@
        		<div class="navButton" id="back">
        			Back
        		</div>
-       		<div class="navButton" id="next">
-       			Next
-       		</div>
+       		<!--  
+       		<a href="LogInPage">
+	       		<div class="navButton" id="next">
+	       			Next
+	       		</div>
+       		</a>
+       		-->
+       		<div class="navButton" id="next" onclick="nextQuestion()">
+	       			Next
+	       	</div>
+       		
        	</div>
        	<div class="submit">
-       		Submit
+      
+       		<form action="LogInPage">
+       		 	<input type="hidden" id="ans1" name="ans" value="ofdska">
+       			<input type="submit" id="submitButtonQuestionnaire">
+       		</form>
        	</div>
         
     </div>

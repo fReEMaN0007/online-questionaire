@@ -100,6 +100,15 @@
     background-color: yellow;
     margin:auto;
     padding: 1vw;
+    
+}
+.questionAni{
+	animation: ani;
+	animation-duration: 2s;
+}
+@keyframes ani{
+	 from {opacity: 0;}
+	 to {opacity: 1;}
 }
 .choices{
 	width: 80%;
@@ -110,7 +119,7 @@
 }
 .choice{
 	width: 50%;
-	background-color: red;
+	background-color: rgb(255, 255, 0)low;
 	float: left;
 	padding: 1vw;
 	padding-bottom: 0;
@@ -122,12 +131,16 @@
 .navButton{
 	width: 50%;
 	float: left;
-	background-color: gray;
 	font-size: 3vw;
 	padding: .5vw;
 	padding-bottom: 0;
-	background-color: lightgray;
+	background-color: green;
+	cursor: pointer;
 }
+.navButton:hover{
+	background-color: whtie;
+}
+
 #next{
 	text-align: right;
 }
@@ -136,6 +149,10 @@
 	text-align: center;
 	font-size: 3vw;
 	margin: auto;
-	background-color: darkgray;
+	background-color: red;
+}
+#submitButtonQuestionnaire{
+	font-size: 2vw;
+	cursor: pointer;
 }
 /*---------------Questionaire-----------------*/

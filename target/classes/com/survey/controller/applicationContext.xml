@@ -10,7 +10,7 @@
                http://www.springframework.org/schema/util
                     http://www.springframework.org/schema/util/spring-util-2.5.xsd">
 
-	<bean id="history" class="com.survey.model.Subject">
+	<bean id="history" class="com.survey.model.Question">
 			<constructor-arg value="History"></constructor-arg>
 			
 			<constructor-arg>
