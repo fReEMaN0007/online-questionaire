@@ -35,11 +35,11 @@
         				</select>
         				<label class="formElements" for="subject">Subject:</label>
         				<select class="formElements" type="select" id="subject" name="subject">
-        					<option value="history">History</option>
-        					<option value="english">English</option>
-        					<option value="science">Science</option>
-        					<option value="math">Math</option>
-        					<option value="logic">Logic</option>
+        					<option name="History" value="History">History</option>
+        					<option name="English" value="English">English</option>
+        					<option name="Science" value="Science">Science</option>
+        					<option name="Math" value="Math">Math</option>
+        					<option name="Logic" value="Logic">Logic</option>
         				</select>
         				<input class="formElements" type="submit" id="submitButton">
         			</form>

@@ -11,27 +11,350 @@
                     http://www.springframework.org/schema/util/spring-util-2.5.xsd">
 
 	<bean id="history" class="com.survey.model.Question">
-			<constructor-arg value="History"></constructor-arg>
 			
 			<constructor-arg>
-				<map>
-					<entry key="What is?" value-ref="hist1" />
-					<entry key="Who is?" value-ref="hist1" />
-		
+				<map >
+					<entry key="History" value-ref="historyPackage" />
+					<entry key="Math" value-ref="mathPackage" />
+					<entry key="Science" value-ref="sciencePackage" />
+					<entry key="Logic" value-ref="logicPackage" />
+					<entry key="English" value-ref="englishPackage" />
 				</map>
 			</constructor-arg> 	
 
 	</bean>
 	
-	<util:map id="hist1" key-type="java.lang.String" value-type="java.util.HashMap">
-	    <entry key="ans1" value-ref="hist1choices" />
+	<!-- REFERENCE FOR HISTORY PACKAGE -->
+	<util:map id="historyPackage">
+	    <entry key="question" value-ref="historyQuestion" />
+	    <entry key="answer" value-ref="historyAnswer" />
+	    <entry key="choice" value-ref="historyChoices" />
+	</util:map>
+
+
+	<util:map id="historyQuestion" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="qst1" value="1. Which city is known as the Walled City?" />
+	    <entry key="qst2" value="2. Which country occupied the Philippines during World War II?" />
+	    <entry key="qst3" value="3. Philippines Independence Day is celebrated on what date?" />
+		<entry key="qst4" value="4. The Bataan Death March took place in what year?" />
+	    <entry key="qst5" value="5. Who was known as the Hero of Tirad Pass?" />
+	    
 	</util:map>
 	
+	<util:map id="historyAnswer" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="ans1" value="B" />
+	    <entry key="ans2" value="C" />
+	    <entry key="ans3" value="A" />
+	    <entry key="ans4" value="B" />
+	    <entry key="ans5" value="A" />
+	</util:map>
+	
+	<util:map id="historyChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">
+	    <entry key="choice1" value-ref="historyChoice1" />
+	    <entry key="choice2" value-ref="historyChoice2" />
+	    <entry key="choice3" value-ref="historyChoice3" />
+	    <entry key="choice4" value-ref="historyChoice4" />
+	    <entry key="choice5" value-ref="historyChoice5" />
+	</util:map>
+	
+	<util:map id="historyChoice1" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. Malolos" />
+	    <entry key="B" value="B. Intramurous" />
+	    <entry key="C" value="C. Makati" />
+	    <entry key="D" value="D. Cebu" />
+	</util:map>
+	<util:map id="historyChoice2" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. Germany" />
+	    <entry key="B" value="B. America" />
+	    <entry key="C" value="C. Japan" />
+	    <entry key="D" value="D. India" />
+	</util:map>
+	<util:map id="historyChoice3" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. June 12" />
+	    <entry key="B" value="B. December 25" />
+	    <entry key="C" value="C. July 11" />
+	    <entry key="D" value="D. August 4" />
+	</util:map>
+	<util:map id="historyChoice4" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. 1980" />
+	    <entry key="B" value="B. 1942" />
+	    <entry key="C" value="C. 1950" />
+	    <entry key="D" value="D. 1560" />
+	</util:map>
+	<util:map id="historyChoice5" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. Gregorio Del Pilar" />
+	    <entry key="B" value="B. Andres Bonifacio" />
+	    <entry key="C" value="C. Jose Rizal" />
+	    <entry key="D" value="D. Marcelo Del Pilar" />
+	</util:map>
+	
+	<!-- REFERENCE FOR SCIENCE PACKAGE -->
+	<util:map id="sciencePackage">
+	    <entry key="question" value-ref="scienceQuestion" />
+	    <entry key="answer" value-ref="scienceAnswer" />
+	    <entry key="choice" value-ref="scienceChoices" />
+	</util:map>
+
+
+	<util:map id="scienceQuestion" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="qst1" value="1. Which of these is a star?" />
+	    <entry key="qst2" value="2. Which is the fastest among these?" />
+	    <entry key="qst3" value="3. Which type of star is the sun?" />
+		<entry key="qst4" value="4. Who invented the telescope?" />
+	    <entry key="qst5" value="5. Which is the biggest planet in our solar system?" />
+	    
+	</util:map>
+	
+	<util:map id="scienceAnswer" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="ans1" value="B" />
+	    <entry key="ans2" value="B" />
+	    <entry key="ans3" value="C" />
+	    <entry key="ans4" value="B" />
+	    <entry key="ans5" value="C" />
+	</util:map>
+	
+	<util:map id="scienceChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">
+	    <entry key="choice1" value-ref="scienceChoice1" />
+	    <entry key="choice2" value-ref="scienceChoice2" />
+	    <entry key="choice3" value-ref="scienceChoice3" />
+	    <entry key="choice4" value-ref="scienceChoice4" />
+	    <entry key="choice5" value-ref="scienceChoice5" />
+	</util:map>
+	
+	<util:map id="scienceChoice1" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. The Moon" />
+	    <entry key="B" value="B. The Sun" />
+	    <entry key="C" value="C. The Ocean" />
+	    <entry key="D" value="D. Jupiter" />
+	</util:map>
+	<util:map id="scienceChoice2" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. Speed of sound" />
+	    <entry key="B" value="B. Speed of light" />
+	    <entry key="C" value="C. Speed of Earth's rotation" />
+	    <entry key="D" value="D. All are equal" />
+	</util:map>
+	<util:map id="scienceChoice3" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. Supernova" />
+	    <entry key="B" value="B. Hypernova" />
+	    <entry key="C" value="C. Red Giant" />
+	    <entry key="D" value="D. Red Supergiant" />
+	</util:map>
+	<util:map id="scienceChoice4" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. Isaac Newton" />
+	    <entry key="B" value="B. Gallelli Galileo" />
+	    <entry key="C" value="C. James Watt" />
+	    <entry key="D" value="D. Roger Bacon" />
+	</util:map>
+	<util:map id="scienceChoice5" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. Mars" />
+	    <entry key="B" value="B. Neptune" />
+	    <entry key="C" value="C. Jupiter" />
+	    <entry key="D" value="D. Earth" />
+	</util:map>
+	
+	<!-- REFERENCE FOR Logic PACKAGE -->
+	<util:map id="logicPackage">
+	    <entry key="question" value-ref="logicQuestion" />
+	    <entry key="answer" value-ref="logicAnswer" />
+	    <entry key="choice" value-ref="logicChoices" />
+	</util:map>
+
+
+	<util:map id="logicQuestion" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="qst1" value="1. PETAL: FLOWER" />
+	    <entry key="qst2" value="2. Careful is to careless as honest is to" />
+	    <entry key="qst3" value="3. Pointing to a photograph, a man said, I have no brother, and that man's father is my father's son. Whose photograph was it?" />
+		<entry key="qst4" value="4. Arrange the following words in a meaningful sequence: (1)Infection, (2)Consultation, (3)Doctor (4)Treatment (5)Recovery" />
+	    <entry key="qst5" value="5. Peter is in the East of Tom and Tom is in the North of John. Mike is in the South of John then in which direction of Peter is Mike?" />
+	    
+	</util:map>
+	
+	<util:map id="logicAnswer" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="ans1" value="B" />
+	    <entry key="ans2" value="D" />
+	    <entry key="ans3" value="A" />
+	    <entry key="ans4" value="B" />
+	    <entry key="ans5" value="B" />
+	</util:map>
+	
+	<util:map id="logicChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">
+	    <entry key="choice1" value-ref="logicChoice1" />
+	    <entry key="choice2" value-ref="logicChoice2" />
+	    <entry key="choice3" value-ref="logicChoice3" />
+	    <entry key="choice4" value-ref="logicChoice4" />
+	    <entry key="choice5" value-ref="logicChoice5" />
+	</util:map>
+	
+	<util:map id="logicChoice1" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. Pen: Paper" />
+	    <entry key="B" value="B. Engine: Car" />
+	    <entry key="C" value="C. Cat: Dog" />
+	    <entry key="D" value="D. Ball: Game" />
+	</util:map>
+	<util:map id="logicChoice2" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. Honesty" />
+	    <entry key="B" value="B. Clever" />
+	    <entry key="C" value="C. truthful" />
+	    <entry key="D" value="D. Corrupt" />
+	</util:map>
+	<util:map id="logicChoice3" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. His son" />
+	    <entry key="B" value="B. His own" />
+	    <entry key="C" value="C. His father" />
+	    <entry key="D" value="D. His nephew
+" />
+	</util:map>
+	<util:map id="logicChoice4" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. 1, 3, 4, 5, 2" />
+	    <entry key="B" value="B. 1, 3, 2, 4, 5" />
+	    <entry key="C" value="C. 1, 2, 3, 4, 5" />
+	    <entry key="D" value="D. 2, 3, 5, 1, 4" />
+	</util:map>
+	<util:map id="logicChoice5" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. South-East" />
+	    <entry key="B" value="B. South-West" />
+	    <entry key="C" value="C. South" />
+	    <entry key="D" value="D. North-East" />
+	</util:map>
+	
+	<!-- REFERENCE FOR MATH PACKAGE -->
+	<util:map id="mathPackage">
+	    <entry key="question" value-ref="mathQuestion" />
+	    <entry key="answer" value-ref="mathAnswer" />
+	    <entry key="choice" value-ref="mathChoices" />
+	</util:map>
+
+
+	<util:map id="mathQuestion" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="qst1" value="1. What is the average of first five multiples of 12?" />
+	    <entry key="qst2" value="2. What is the compound interest on Rs. 2500 for 2 years at rate of interest 4% per annum?" />
+	    <entry key="qst3" value="3. A mother is twice as old as her son. If 20 years ago, the age of the mother was 10 times the age of the son, what is the present age of the mother?" />
+		<entry key="qst4" value="4. The speed of a boat in still water is 5km/hr. If the speed of the boat against the stream is 3 km/hr, what is the speed of the stream?" />
+	    <entry key="qst5" value="5. How many times the hands of a clock coincide in a day?" />
+	    
+	</util:map>
+	
+	<util:map id="mathAnswer" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="ans1" value="A" />
+	    <entry key="ans2" value="B" />
+	    <entry key="ans3" value="D" />
+	    <entry key="ans4" value="B" />
+	    <entry key="ans5" value="B" />
+	</util:map>
+	
+	<util:map id="mathChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">
+	    <entry key="choice1" value-ref="mathChoice1" />
+	    <entry key="choice2" value-ref="mathChoice2" />
+	    <entry key="choice3" value-ref="mathChoice3" />
+	    <entry key="choice4" value-ref="mathChoice4" />
+	    <entry key="choice5" value-ref="mathChoice5" />
+	</util:map>
+	
+	<util:map id="mathChoice1" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. 36" />
+	    <entry key="B" value="B. 38" />
+	    <entry key="C" value="C. 40" />
+	    <entry key="D" value="D. 42" />
+	</util:map>
+	<util:map id="mathChoice2" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. 180" />
+	    <entry key="B" value="B. 204" />
+	    <entry key="C" value="C. 210" />
+	    <entry key="D" value="D. 220" />
+	</util:map>
+	<util:map id="mathChoice3" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. 38 years" />
+	    <entry key="B" value="B. 40 years" />
+	    <entry key="C" value="C. 43 years" />
+	    <entry key="D" value="D. 45 years" />
+	</util:map>
+	<util:map id="mathChoice4" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. 1.5 km/hr" />
+	    <entry key="B" value="B. 2 km/hr" />
+	    <entry key="C" value="C. 2.5 km/hr" />
+	    <entry key="D" value="D. 1 km/hr" />
+	</util:map>
+	<util:map id="mathChoice5" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. 24" />
+	    <entry key="B" value="B. 22" />
+	    <entry key="C" value="C. 23" />
+	    <entry key="D" value="D. 21" />
+	</util:map>
+	
+	<!-- REFERENCE FOR ENGLISH PACKAGE -->
+	<util:map id="englishPackage">
+	    <entry key="question" value-ref="englishQuestion" />
+	    <entry key="answer" value-ref="englishAnswer" />
+	    <entry key="choice" value-ref="englishChoices" />
+	</util:map>
+
+
+	<util:map id="englishQuestion" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="qst1" value="1. He was very tired as he is working since 6 O' clock in the morning." />
+	    <entry key="qst2" value="2. A person who travels on foot." />
+	    <entry key="qst3" value="3. To cry wolf" />
+		<entry key="qst4" value="4. They walked __ the edge of the land." />
+	    <entry key="qst5" value="5. She lives __ a one bedroom flat __ the second floor." />
+	    
+	</util:map>
+	
+	<util:map id="englishAnswer" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="ans1" value="C" />
+	    <entry key="ans2" value="A" />
+	    <entry key="ans3" value="D" />
+	    <entry key="ans4" value="C" />
+	    <entry key="ans5" value="B" />
+	</util:map>
+	
+	<util:map id="englishChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">
+	    <entry key="choice1" value-ref="englishChoice1" />
+	    <entry key="choice2" value-ref="englishChoice2" />
+	    <entry key="choice3" value-ref="englishChoice3" />
+	    <entry key="choice4" value-ref="englishChoice4" />
+	    <entry key="choice5" value-ref="englishChoice5" />
+	</util:map>
+	
+	<util:map id="englishChoice1" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. he was working" />
+	    <entry key="B" value="B. he had been working" />
+	    <entry key="C" value="C. he has been working" />
+	    <entry key="D" value="D. he will be working
+" />
+	</util:map>
+	<util:map id="englishChoice2" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. pedestrian" />
+	    <entry key="B" value="B. traveler" />
+	    <entry key="C" value="C. walker" />
+	    <entry key="D" value="D. health conscious" />
+	</util:map>
+	<util:map id="englishChoice3" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. to speak loudly" />
+	    <entry key="B" value="B. to eat like a wolf" />
+	    <entry key="C" value="C. to get afraid" />
+	    <entry key="D" value="D. to give a false alarm" />
+	</util:map>
+	<util:map id="englishChoice4" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. up to" />
+	    <entry key="B" value="B. as far as" />
+	    <entry key="C" value="C. Either A or B" />
+	    <entry key="D" value="D. until" />
+	</util:map>
+	<util:map id="englishChoice5" key-type="java.lang.String" value-type="java.lang.String">
+	    <entry key="A" value="A. on, on" />
+	    <entry key="B" value="B. in, on" />
+	    <entry key="C" value="C. on, in" />
+	    <entry key="D" value="D. in, in" />
+	</util:map>
+	
+	
+	
+	
+	<!-- 
 	<util:list id="hist1choices" value-type="java.lang.String">
 	    <value>foo</value>
 	    <value>bar</value>
 	</util:list>
-
+ -->
  
 </beans>  
 

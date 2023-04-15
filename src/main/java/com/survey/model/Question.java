@@ -2,33 +2,35 @@ package com.survey.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import org.springframework.web.servlet.ModelAndView;
 
 public class Question {
 	String subject;
 	HashMap<String, HashMap<String,ArrayList<String>>>  questions;
-	HashMap<String,String> king = new HashMap<String,String>();
+	LinkedHashMap<String, LinkedHashMap<String, Object>> questioinPackage;
 	
 	
-	public Question(String subject, HashMap<String, HashMap<String, ArrayList<String>>> questions) {
+//	public Question(String subject, HashMap<String, HashMap<String, ArrayList<String>>> questions) {
+	public Question(LinkedHashMap<String, LinkedHashMap<String, Object>> questioinPackage) {
 		super();
-		this.subject = subject;
-		this.questions = questions;
+	
+		this.questioinPackage = questioinPackage;
 
 		
 	}
 	
 	public ModelAndView insertData(int questionNumber, String subject) {
 		ModelAndView mv = new ModelAndView();
-		king.put("ina", "one");
+		
+		
+
 		mv.addObject("subject",subject);
-		mv.addObject("question",subject);
+		mv.addObject("question",questioinPackage.get(subject).get("question"));
+		mv.addObject("choice",questioinPackage.get(subject).get("choice"));
 		
-		mv.addObject("king",king);
-		mv.addObject("questions",questions);
-		
-		mv.addObject("question",questions.get("What is?").get("ans1").get(0));
+	
 		mv.setViewName("Questionaire.jsp");
 		
 		return mv;

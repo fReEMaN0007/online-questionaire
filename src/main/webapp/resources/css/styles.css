@@ -105,6 +105,7 @@
 .questionAni{
 	animation: ani;
 	animation-duration: 2s;
+	display:block;
 }
 @keyframes ani{
 	 from {opacity: 0;}
