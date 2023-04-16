@@ -9,7 +9,16 @@
                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
                http://www.springframework.org/schema/util
                     http://www.springframework.org/schema/util/spring-util-2.5.xsd">
-
+                    
+                    
+    <bean id="person" class="com.survey.model.Person">
+    
+    </bean>
+                        
+    <bean id="result" class="com.survey.model.Result">
+    
+    </bean>                                
+                    
 	<bean id="history" class="com.survey.model.Question">
 			
 			<constructor-arg>

@@ -119,7 +119,7 @@
        	</div>
        	<div class="submit">
       
-       		<form action="LogInPage">
+       		<form action="Result">
        		 	<input type="hidden" id="ans1" name="ans" value="ofdska">
        			<input type="submit" id="submitButtonQuestionnaire">
        		</form>

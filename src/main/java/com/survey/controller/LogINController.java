@@ -18,22 +18,30 @@ public class LogINController {
 	
 	ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("com/survey/controller/applicationContext.xml");
 	Question questions = context.getBean(com.survey.model.Question.class);
-	//Person person = context.getBean(com.survey.model.Person.class);
-	Result rs = new Result();
+	Person person = context.getBean(com.survey.model.Person.class);
+	Result result =  context.getBean(com.survey.model.Result.class);
 	
 	String subject;
 	
 	
 	@RequestMapping("/question1")
 	public ModelAndView qst1(@RequestParam("name")String name, @RequestParam("education")String education, @RequestParam("subject")String subject) {
-		//person.setName(name);
-		//person.setEducation(education);
 		this.subject=subject;
+		person.setName(name);
+		person.setEducation(education);
+		person.setSubject(subject);
+		System.out.println(person.toString());
 		return questions.insertData(1,subject);
 	}
-	@RequestMapping("/question2")
-	public  void qst2() {
-		questions.insertData(2, subject);
+	@RequestMapping("/Result")
+	public  ModelAndView result(@RequestParam("ans")String ans) {
+		System.out.println(person.getName());
+		//TODO
+		//DB CONNECTION HERE!!
+		//insert person to DB!!
+		
+		return result.showResult(person.getName()+person.getEducation());
+		
 	}
 	@RequestMapping("/question3")
 	public void qst3() {
@@ -48,9 +56,8 @@ public class LogINController {
 		questions.insertData(5,subject);
 	}
 	@RequestMapping("/LogInPage")
-	public ModelAndView nextP(@RequestParam("ans")String ans) {
+	public void nextP() {
 		
-		return rs.showResult(ans);
 	}
 	
 	
