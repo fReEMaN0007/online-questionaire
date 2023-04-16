@@ -27,11 +27,11 @@
         				<input class="formElements" type="text" id="name" name="name">
         				<label class="formElements" for="education">Educational Attainment:</label>
         				<select class="formElements" type="select" id="education" name="education">
-        					<option value="elementary">Elementary</option>
-        					<option value="highschool">High School</option>
-        					<option value="seniorhigh">Senior High</option>
-        					<option value="college">College</option>
-        					<option value="vocational">Vocational</option>
+        					<option name="Elementary" value="Elementary">Elementary</option>
+        					<option name="High School" value="High School">High School</option>
+        					<option name="Senior High" value="Senior High">Senior High</option>
+        					<option name="College" value="College">College</option>
+        					<option name="Vocational" value="Vocational">Vocational</option>
         				</select>
         				<label class="formElements" for="subject">Subject:</label>
         				<select class="formElements" type="select" id="subject" name="subject">

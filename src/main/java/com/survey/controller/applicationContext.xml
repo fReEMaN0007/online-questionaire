@@ -12,7 +12,21 @@
                     
                     
     <bean id="person" class="com.survey.model.Person">
-    
+    	<constructor-arg>
+				<map value-type="java.lang.Integer">
+					<entry key="History" value="1" />
+					<entry key="Math" value="2" />
+					<entry key="Science" value="3" />
+					<entry key="Logic" value="4" />
+					<entry key="English" value="5" />
+					
+					<entry key="Elementary" value="1" />
+					<entry key="High School" value="2" />
+					<entry key="Senior High" value="3" />
+					<entry key="College" value="4" />
+					<entry key="Vocational" value="5" />
+				</map>
+			</constructor-arg> 	 
     </bean>
                         
     <bean id="result" class="com.survey.model.Result">
@@ -364,6 +378,22 @@
 	    <value>bar</value>
 	</util:list>
  -->
+ 
+ <!-- DAO BEANS -->
+	<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+		<property name="url" value="jdbc:mysql://localhost:3306/online_survey?useSSL=false" />  
+		<property name="username" value="root" />  
+		<property name="password" value="root4025637A" />  
+	</bean>  
+	  
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">  
+		<property name="dataSource" ref="ds"></property>  
+	</bean>  
+	  
+	<bean id="surveyDao" class="com.survey.dao.SurveyDao">  
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>  
+	</bean> 
  
 </beans>  
 

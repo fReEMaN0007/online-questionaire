@@ -1,26 +1,41 @@
 package com.survey.model;
 
+import java.util.HashMap;
+
 public class Person {
 	String name;
 	String education;
 	String subject;
 	int score;
-	
+	HashMap<String, Integer> id;
 	int education_id;
 	int subject_id;
 	
+	Person(HashMap<String, Integer> id){
+		super();
+		this.id=id;
+	}
+	
+
 	public int getEducation_id() {
-		
-		switch(education_id) {
-		case "elementary" :
-			education_id=1;
-		
-		break;
-		
-		}
-		
 		return education_id;
 	}
+
+
+	public void setEducation_id(int education_id) {
+		this.education_id = education_id;
+	}
+
+
+	public int getSubject_id() {
+		return subject_id;
+	}
+
+
+	public void setSubject_id(int subject_id) {
+		this.subject_id = subject_id;
+	}
+
 
 	public int getScore() {
 		return score;
@@ -33,6 +48,7 @@ public class Person {
 	}
 	public void setSubject(String subject) {
 		this.subject = subject;
+		setSubject_id(id.get(subject));
 	}
 	public String getName() {
 		return name;
@@ -45,11 +61,16 @@ public class Person {
 	}
 	public void setEducation(String education) {
 		this.education = education;
+		setEducation_id(id.get(education));
 	}
+
+
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", education=" + education + ", subject=" + subject + ", score=" + score + "]";
+		return "Person [name=" + name + ", education=" + education + ", subject=" + subject + ", score=" + score
+				+ ", id=" + id + ", education_id=" + education_id + ", subject_id=" + subject_id + "]";
 	}
+	
 	
 	
 	

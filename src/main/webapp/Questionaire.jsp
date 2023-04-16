@@ -118,7 +118,6 @@
        		
        	</div>
        	<div class="submit">
-      
        		<form action="Result">
        		 	<input type="hidden" id="ans1" name="ans" value="ofdska">
        			<input type="submit" id="submitButtonQuestionnaire">

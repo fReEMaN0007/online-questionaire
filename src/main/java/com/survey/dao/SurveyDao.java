@@ -12,19 +12,20 @@ public class SurveyDao {
 	    this.jdbcTemplate = jdbcTemplate;  
 	}
 	
-	public int saveEmployee(Person person){  
+	public String saveEmployee(Person person){  
 	
-	    String query="insert into employee values("+e.getName()+","+e.getEducation()+","+e.getSubject()+","+e.get+")";  
-	    return jdbcTemplate.update(query);  
-	}  
-	public int updateEmployee(Employee e){  
-	    String query="update employee set   
-	    name='"+e.getName()+"',salary='"+e.getSalary()+"' where id='"+e.getId()+"' ";  
+	    String query="insert into person (name,education_id,subject_id,score,date) values('"+person.getName()+"',"+person.getEducation_id()+","+person.getSubject_id()+","+person.getScore()+",CURDATE())";  
+	    return String.valueOf(jdbcTemplate.update(query)) + "Added to DB!";  
+	}
+	/* NO NEED TO IMPLEMENT THE UPDATE AND DELETE, RIGHT NOW!
+	public int updateEmployee(Person person){  
+	    String query="update employee set name="+person.getName()+",education="+person.getEducation_id()+"where id="+e.getId()+" ";  
 	    return jdbcTemplate.update(query);  
 	}  
 	public int deleteEmployee(Employee e){  
 	    String query="delete from employee where id='"+e.getId()+"' ";  
 	    return jdbcTemplate.update(query);  
 	}  
+	*/
 
 }

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.survey.dao.SurveyDao;
 import com.survey.model.Person;
 import com.survey.model.Question;
 import com.survey.model.Result;
@@ -20,7 +21,7 @@ public class LogINController {
 	Question questions = context.getBean(com.survey.model.Question.class);
 	Person person = context.getBean(com.survey.model.Person.class);
 	Result result =  context.getBean(com.survey.model.Result.class);
-	
+	SurveyDao dao =  context.getBean(com.survey.dao.SurveyDao.class);
 	String subject;
 	
 	
@@ -30,17 +31,23 @@ public class LogINController {
 		person.setName(name);
 		person.setEducation(education);
 		person.setSubject(subject);
+		person.setScore(100);
 		System.out.println(person.toString());
 		return questions.insertData(1,subject);
 	}
 	@RequestMapping("/Result")
 	public  ModelAndView result(@RequestParam("ans")String ans) {
-		System.out.println(person.getName());
-		//TODO
+			System.out.println(person.getName());
+			
+			
+		    
+		//TODO DONE
 		//DB CONNECTION HERE!!
 		//insert person to DB!!
+		    String status=dao.saveEmployee(person);  
+		    System.out.println(status);  
 		
-		return result.showResult(person.getName()+person.getEducation());
+		return result.showResult(person.getName()+" "+person.getEducation()+" "+person.getSubject()+" "+person.getScore());
 		
 	}
 	@RequestMapping("/question3")
