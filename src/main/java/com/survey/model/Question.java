@@ -21,14 +21,16 @@ public class Question {
 		
 	}
 	
-	public ModelAndView insertData(int questionNumber, String subject) {
+	public ModelAndView insertData(int questionNumber, String subject, String person) {
 		ModelAndView mv = new ModelAndView();
 		
 		
 
 		mv.addObject("subject",subject);
+		mv.addObject("person",person);
 		mv.addObject("question",questioinPackage.get(subject).get("question"));
 		mv.addObject("choice",questioinPackage.get(subject).get("choice"));
+		mv.addObject("answer",questioinPackage.get(subject).get("answer"));
 		
 	
 		mv.setViewName("Questionaire.jsp");

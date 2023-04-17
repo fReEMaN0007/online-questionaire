@@ -85,21 +85,26 @@
     display: block;
     margin: auto;
     background-color: aliceblue;
+  
 }
 .title{
     width: 80%;
     margin: auto;
-    background-color: white;
+    background-color:  #8000ff;
     font-size: 5vw;
     text-align: center;
+    color: white;
+	
 }
 .question{
     width: 80%;
     font-size: 3vw;
     text-align: left;
-    background-color: yellow;
+    background-color: white;
     margin:auto;
     padding: 1vw;
+  	border: solid;
+    border-color: #8000ff;
     
 }
 .questionAni{
@@ -111,49 +116,106 @@
 	 from {opacity: 0;}
 	 to {opacity: 1;}
 }
-.choices{
+#choices{
 	width: 80%;
+	height:8vw;
     font-size: 1.5vw;
     text-align: left;
-    background-color: green;
+    background-color: white;
     margin:auto;
+    border: solid;
+    padding: .2vw;
+    border-color: #8000ff;
+
+   
 }
 .choice{
 	width: 50%;
-	background-color: rgb(255, 255, 0)low;
+	background-color: #8000ff;
 	float: left;
 	padding: 1vw;
-	padding-bottom: 0;
+	padding-bottom: .5vw;
+	border:solid;
+	border-color: white;
+	border-width:.2vw;
+	color:white;
+	border-radius: 5vw;
+	animation: choiceAni;
+	animation-duration: .5s;
+	animation-timing-function: ease;
+	cursor: pointer;
 }
-.navigator{
+@keyframes choiceAni{
+	 0% {transform: rotateX(0deg); background-color:white;}
+	 10% {transform: rotateX(72deg);}
+	 20% {transform: rotateX(144deg);}
+	 30% {transform: rotateX(216deg);background-color:#8000ff;}
+	 40% {transform: rotateX(288deg);}
+	 50% {transform: rotateX(360deg);}
+	 60% {transform: rotateX(72deg);}
+	 70% {transform: rotateX(144deg);background-color:#8000ff;}
+	 80% {transform: rotateX(216deg);}
+	 90% {transform: rotateX(288deg);}
+	 100% {transform: rotateX(360deg);}
+
+}
+.choice:hover{
+	background-color: #7000e0;
+}
+#quizSummary{
+	display: none;
+	width: 80%;
+	text-align: center;
+	font-size: 3vw;
+	margin: auto;
+	
+}
+#checkerMessage{
+	font-size: 3vw;
+	text-align: center;
+	border: solid;
+	border-color: #8000ff;
+	color:white;
+}
+
+#navigator{
 	width: 80%;
 	margin: auto;
+	display: none;
+
 }
+
 .navButton{
-	width: 50%;
+	width: 100%;
 	float: left;
 	font-size: 3vw;
 	padding: .5vw;
 	padding-bottom: 0;
-	background-color: green;
+	background-color: #8000ff;
 	cursor: pointer;
+	text-align: center;
+	color:white;
+	display:block;
+
 }
 .navButton:hover{
-	background-color: whtie;
+	background-color: #7000e0;
 }
 
-#next{
-	text-align: right;
-}
+
 .submit{
 	width: 80%;
 	text-align: center;
 	font-size: 3vw;
 	margin: auto;
-	background-color: red;
+	background-color: white;
+	display:block;
 }
 #submitButtonQuestionnaire{
 	font-size: 2vw;
 	cursor: pointer;
+	display: none;
+	margin:auto;
 }
+
 /*---------------Questionaire-----------------*/

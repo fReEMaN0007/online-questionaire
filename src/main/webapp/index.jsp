@@ -42,7 +42,7 @@
         					<option name="Logic" value="Logic">Logic</option>
         				</select>
         				<input class="formElements" type="submit" id="submitButton">
-        			</form>
+        			</form> 
         		</div>
         	</div>
         

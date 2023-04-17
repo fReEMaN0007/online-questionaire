@@ -19,16 +19,27 @@ function nextQuestion(){
 	question[3]=document.getElementById("question3");
 	question[4]=document.getElementById("question4")
 	question[5]=document.getElementById("question5");
-	question[6]=document.getElementById("question6");
+
 	
 	choice[1]=document.getElementById("choice1")
 	choice[2]=document.getElementById("choice2");
 	choice[3]=document.getElementById("choice3");
 	choice[4]=document.getElementById("choice4")
 	choice[5]=document.getElementById("choice5");
-	choice[6]=document.getElementById("choice6");
+
 	
 	
+	if(question[5].style.display=="block"){
+		document.getElementById("questionHead").style.display="none";
+		document.getElementById("choices").style.display="none";
+		document.getElementById("quizSummary").style.display="block";
+		document.getElementById("navigator").style.display= "none";
+		document.getElementById("submitButtonQuestionnaire").style.display= "block";
+		
+	}
+	
+	else{
+		
 	for(let i=1;i<=5;i++){
 			if(question[i].style.display=="block"){
 				question[i].style.display = "none";
@@ -38,7 +49,28 @@ function nextQuestion(){
 				break;	
 			}
 		}
-		
-		
 	}
+	
+	document.getElementById("navigator").style.display= "none";
+	}
+function correctAns(ans,corretAns,qst){
+		document.getElementById("navigator").style.display= "block";
+		
+	if(ans==corretAns){
+		document.getElementById("choice"+corretAns+qst).style.backgroundColor= "#00ff1e";
+		document.getElementById("choice"+corretAns+qst).style.color= "blue";
+		document.getElementById("checkerMessage").innerHTML= "Correct!";
+		document.getElementById("checkerMessage").style.backgroundColor= "#00ff1e";
+	}
+	else{
+		document.getElementById("choice"+ans+qst).style.backgroundColor= "red";
+		document.getElementById("choice"+corretAns+qst).style.backgroundColor= "#00ff1e";
+		document.getElementById("choice"+corretAns+qst).style.color= "blue";
+		document.getElementById("checkerMessage").innerHTML= "Wrong!";
+		document.getElementById("checkerMessage").style.backgroundColor= "red";
+	}
+
+}
+
+
 	
