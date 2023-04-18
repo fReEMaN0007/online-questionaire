@@ -54,7 +54,10 @@ public class Person {
 		return name;
 	}
 	public void setName(String name) {
-		this.name = name;
+		if(name=="") {
+			this.name="Unknown";
+		}
+	
 	}
 	public String getEducation() {
 		return education;

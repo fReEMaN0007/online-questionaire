@@ -168,6 +168,18 @@
 	text-align: center;
 	font-size: 3vw;
 	margin: auto;
+	height: 10vw;
+	border-left: solid;
+	border-right: solid;
+	border-color: #8000ff;
+	
+}
+.spacer{
+	width:100%;
+	border-left: solid;
+	border-right: solid;
+	border-color: #8000ff;
+	display: none;
 	
 }
 #checkerMessage{
@@ -181,8 +193,7 @@
 #navigator{
 	width: 80%;
 	margin: auto;
-	display: none;
-
+	display:none;
 }
 
 .navButton{
@@ -203,19 +214,133 @@
 }
 
 
-.submit{
+#submit{
 	width: 80%;
 	text-align: center;
 	font-size: 3vw;
 	margin: auto;
-	background-color: white;
-	display:block;
+	border: solid;
+	border-top:none;
+	border-color: #8000ff;
+	display: none;
+	padding:0;
+
+	
 }
 #submitButtonQuestionnaire{
 	font-size: 2vw;
 	cursor: pointer;
 	display: none;
 	margin:auto;
+	width:50%;
+	background-color: #8000ff;
+	color: white;
+	border-radius: 2vw;
+	border: none;
+	padding:.1vw;
 }
 
 /*---------------Questionaire-----------------*/
+
+/*---------------Summary & Statistics-----------------*/
+#dataCon{
+	border:solid;
+	border-color: #8000ff;
+	width: 80%;
+	padding: .5vw;
+	padding-bottom: 2vw;
+	margin: auto;
+	height:20vw;
+}
+
+.infoTag{
+	font-size: 1vw;
+	
+}
+.elValue{
+	color: red;
+	font-style: bold;
+}
+
+.flexOuter{
+	display: flex;
+	flex: 0 0 100%;
+}
+
+.questionSummary{
+	width:45%;
+}
+.answerSummary{
+	width:17%;
+
+}
+.resultSummary{
+	width:8%;
+
+}
+.statsSummary{
+	width:30%;
+	border: none;
+}
+.summaryHead{
+	float:left;
+	padding:.2vw;
+	text-align: center;
+	font-weight: bolder;
+	
+}
+.summaryRow{
+	float:left;
+	padding:.2vw;
+	text-align: left;
+}
+.summaryHead, .summaryRow{
+	border-right: solid;
+	border-width: 1px;
+	display: block;
+	border-color:white;
+	font-size: 1vw;
+	
+}
+
+.head{
+	background-color: #8000ff;
+	color: white;
+}
+.odd{
+	background-color: #8ed3f5;
+}
+.even{
+	background-color: #c8e9fa;
+}
+.percentageBarOuter{
+	width: 100%;
+	background-color: #A3A9AD;
+	text-align: center;
+	position: relative;
+	color: white;
+}
+:root{
+	--percentWidth:0%;
+}
+.percentageBarInner{
+	width: var(--percentWidth);
+	padding-bottom: 1.5vw;
+	background-color: #8000ff;
+	animation: percentAni;
+	animation-duration:2s;
+	animation-timing-function: ease;
+}
+@keyframes percentAni{
+	from{width: 0}
+	to{width: var(--percentWidth)};
+}
+.percentageText{
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+
+

@@ -31,23 +31,25 @@ public class LogINController {
 		person.setName(name);
 		person.setEducation(education);
 		person.setSubject(subject);
-		person.setScore(100);
 		System.out.println(person.toString());
 		return questions.insertData(1,subject,person.getName());
 	}
 	@RequestMapping("/Result")
-	public  ModelAndView result(@RequestParam("ans")String ans) {
-			System.out.println(person.getName());
-			
-			
-		    
+	public  ModelAndView result(@RequestParam("score")String score,@RequestParam("ans1")String ans1,@RequestParam("ans2")String ans2,@RequestParam("ans3")String ans3,@RequestParam("ans4")String ans4,@RequestParam("ans5")String ans5) {
+			System.out.println(person.getName());  
+			person.setScore(Integer.valueOf(score));
 		//TODO DONE
 		//DB CONNECTION HERE!!
 		//insert person to DB!!
-		    String status=dao.saveEmployee(person);  
-		    System.out.println(status);  
-		
-		return result.showResult(person.getName()+" "+person.getEducation()+" "+person.getSubject()+" "+person.getScore());
+//		    String status=dao.saveEmployee(person);  
+//		    System.out.println(status);  
+		String[] resultAns = new String[6];
+		resultAns[1]=ans1;
+		resultAns[2]=ans2;
+		resultAns[3]=ans3;
+		resultAns[4]=ans4;
+		resultAns[5]=ans5;
+		return result.showResult(person, questions, resultAns);
 		
 	}
 	@RequestMapping("/question3")

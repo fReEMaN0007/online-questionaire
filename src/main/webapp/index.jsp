@@ -41,7 +41,7 @@
         					<option name="Math" value="Math">Math</option>
         					<option name="Logic" value="Logic">Logic</option>
         				</select>
-        				<input class="formElements" type="submit" id="submitButton">
+        				<input class="formElements" type="submit" id="submitButton" >
         			</form> 
         		</div>
         	</div>

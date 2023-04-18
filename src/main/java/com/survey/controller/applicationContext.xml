@@ -70,6 +70,12 @@
 	    <entry key="ans3" value="A" />
 	    <entry key="ans4" value="B" />
 	    <entry key="ans5" value="A" />
+	    
+	    <entry key="ans1Text" value="B. Intramurous" />
+	    <entry key="ans2Text" value="C. Japan" />
+	    <entry key="ans3Text" value="A. June 12" />
+	    <entry key="ans4Text" value="B. 1942" />
+	    <entry key="ans5Text" value="A. Gregorio Del Pilar" />
 	</util:map>
 	
 	<util:map id="historyChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">
@@ -198,6 +204,12 @@
 	    <entry key="ans3" value="A" />
 	    <entry key="ans4" value="B" />
 	    <entry key="ans5" value="B" />
+	    
+	    <entry key="ans1Text" value="B. Engine: Car" />
+	    <entry key="ans2Text" value="D. Corrupt" />
+	    <entry key="ans3Text" value="A. His son" />
+	    <entry key="ans4Text" value="B. 1, 3, 2, 4, 5" />
+	    <entry key="ans5Text" value="B. South-West" />
 	</util:map>
 	
 	<util:map id="logicChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">

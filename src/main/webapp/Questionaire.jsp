@@ -101,8 +101,9 @@
 		</div>
 		
 		<div id="quizSummary">
-				Congratulations ${person}!
-				Your score is 100
+				<span id="congrats"></span> ${person}!
+				<div id="spacer"></div>
+				Your score is <span id="scoreVar"></span> out of 5.
 		</div>
 	    <div id="navigator">
 
@@ -115,13 +116,14 @@
          		
        	</div>
        	
-       	<div class="submit">
-       		<form action="Result">
-       		 	<input type="hidden" id="ans1" name="ans" value="ofdska">
-       		 	<input type="hidden" id="ans2" name="ans" value="ofdska">
-       		 	<input type="hidden" id="ans3" name="ans" value="ofdska">
-       		 	<input type="hidden" id="ans4" name="ans" value="ofdska">
-       		 	<input type="hidden" id="ans5" name="ans" value="ofdska">
+       	<div id="submit">
+       		<form action="Result" target="_blank">
+       		 	<input type="hidden" id="ans1" name="ans1" value="wrong">
+       		 	<input type="hidden" id="ans2" name="ans2" value="wrong">
+       		 	<input type="hidden" id="ans3" name="ans3" value="wrong">
+       		 	<input type="hidden" id="ans4" name="ans4" value="wrong">
+       		 	<input type="hidden" id="ans5" name="ans5" value="wrong">
+       		 	<input type="hidden" id="score" name="score" >
        			<input type="submit" id="submitButtonQuestionnaire" value="SAVE">
        		</form>
        	</div>
