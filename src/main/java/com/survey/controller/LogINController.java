@@ -38,17 +38,23 @@ public class LogINController {
 	public  ModelAndView result(@RequestParam("score")String score,@RequestParam("ans1")String ans1,@RequestParam("ans2")String ans2,@RequestParam("ans3")String ans3,@RequestParam("ans4")String ans4,@RequestParam("ans5")String ans5) {
 			System.out.println(person.getName());  
 			person.setScore(Integer.valueOf(score));
+			
+			String[] resultAns = new String[6];
+			resultAns[1]=ans1;
+			resultAns[2]=ans2;
+			resultAns[3]=ans3;
+			resultAns[4]=ans4;
+			resultAns[5]=ans5;
 		//TODO DONE
 		//DB CONNECTION HERE!!
 		//insert person to DB!!
 //		    String status=dao.saveEmployee(person);  
-//		    System.out.println(status);  
-		String[] resultAns = new String[6];
-		resultAns[1]=ans1;
-		resultAns[2]=ans2;
-		resultAns[3]=ans3;
-		resultAns[4]=ans4;
-		resultAns[5]=ans5;
+//		    System.out.println(status); 
+			
+			String status2 = dao.insertStats(resultAns, person.getSubject_id());
+	
+			System.out.println(status2);
+		
 		return result.showResult(person, questions, resultAns);
 		
 	}

@@ -1,3 +1,27 @@
+:root{
+	--percentWidth:0%;
+	--uiColor: #ffdd00;
+	--hoverColor:#e4c811;
+	--subject1Color: #ff5c77;
+	--subject2Color: #2DAEFD;
+	--subject3Color: #4af7b5;
+	--subject4Color: #ffa742;
+	--subject5Color: #ffdd00;
+	
+	--hover1Color: #d2465b;
+	--hover2Color: #1f99e5;
+	--hover3Color: #32c88e;
+	--hover4Color: #dd8f36;
+	--hover5Color: #e4c811;
+	
+	
+	--box1Color: var(--subject1Color);
+	--box2Color: var(--subject1Color);
+	--box3Color: var(--subject1Color);
+	--box4Color: var(--subject1Color);
+}
+
+
 *{
 	box-sizing: border-box;
 }
@@ -90,10 +114,10 @@
 .title{
     width: 80%;
     margin: auto;
-    background-color:  #8000ff;
+    background-color: var(--uiColor);
     font-size: 5vw;
     text-align: center;
-    color: white;
+    color: black;
 	
 }
 .question{
@@ -104,7 +128,7 @@
     margin:auto;
     padding: 1vw;
   	border: solid;
-    border-color: #8000ff;
+    border-color: var(--uiColor);
     
 }
 .questionAni{
@@ -125,20 +149,20 @@
     margin:auto;
     border: solid;
     padding: .2vw;
-    border-color: #8000ff;
+    border-color: var(--uiColor);
 
    
 }
 .choice{
 	width: 50%;
-	background-color: #8000ff;
+	background-color: var(--uiColor);
 	float: left;
 	padding: 1vw;
 	padding-bottom: .5vw;
 	border:solid;
 	border-color: white;
 	border-width:.2vw;
-	color:white;
+	color:black;
 	border-radius: 5vw;
 	animation: choiceAni;
 	animation-duration: .5s;
@@ -149,18 +173,18 @@
 	 0% {transform: rotateX(0deg); background-color:white;}
 	 10% {transform: rotateX(72deg);}
 	 20% {transform: rotateX(144deg);}
-	 30% {transform: rotateX(216deg);background-color:#8000ff;}
+	 30% {transform: rotateX(216deg);background-color: var(--uiColor);}
 	 40% {transform: rotateX(288deg);}
 	 50% {transform: rotateX(360deg);}
 	 60% {transform: rotateX(72deg);}
-	 70% {transform: rotateX(144deg);background-color:#8000ff;}
+	 70% {transform: rotateX(144deg);background-color: var(--uiColor);}
 	 80% {transform: rotateX(216deg);}
 	 90% {transform: rotateX(288deg);}
 	 100% {transform: rotateX(360deg);}
 
 }
 .choice:hover{
-	background-color: #7000e0;
+	background-color: var(--hoverColor);
 }
 #quizSummary{
 	display: none;
@@ -171,14 +195,14 @@
 	height: 10vw;
 	border-left: solid;
 	border-right: solid;
-	border-color: #8000ff;
+	border-color: var(--uiColor);
 	
 }
 .spacer{
 	width:100%;
 	border-left: solid;
 	border-right: solid;
-	border-color: #8000ff;
+	border-color: var(--uiColor);
 	display: none;
 	
 }
@@ -186,7 +210,7 @@
 	font-size: 3vw;
 	text-align: center;
 	border: solid;
-	border-color: #8000ff;
+	border-color: var(--uiColor);
 	color:white;
 }
 
@@ -202,7 +226,7 @@
 	font-size: 3vw;
 	padding: .5vw;
 	padding-bottom: 0;
-	background-color: #8000ff;
+	background-color: var(--uiColor);
 	cursor: pointer;
 	text-align: center;
 	color:white;
@@ -210,7 +234,7 @@
 
 }
 .navButton:hover{
-	background-color: #7000e0;
+	background-color: var(--hoverColor);
 }
 
 
@@ -245,12 +269,13 @@
 /*---------------Summary & Statistics-----------------*/
 #dataCon{
 	border:solid;
-	border-color: #8000ff;
+	border-color: var(--uiColor);
 	width: 80%;
 	padding: .5vw;
 	padding-bottom: 2vw;
 	margin: auto;
-	height:20vw;
+	height:37vw;
+;
 }
 
 .infoTag{
@@ -320,13 +345,11 @@
 	position: relative;
 	color: white;
 }
-:root{
-	--percentWidth:0%;
-}
+
 .percentageBarInner{
 	width: var(--percentWidth);
 	padding-bottom: 1.5vw;
-	background-color: #8000ff;
+	background-color: var(--uiColor);
 	animation: percentAni;
 	animation-duration:2s;
 	animation-timing-function: ease;
@@ -340,7 +363,123 @@
   	top: 50%;
   	left: 50%;
   	transform: translate(-50%, -50%);
+  	color: black;
+  	
 }
+/*---------------Summary & Statistics-----------------*/
+
+/*---------------Others-----------------*/
+.othersCon{
+	width: 100%;
+	border-top: solid;
+	border-color: lightGray;
+	border-width: 1px;
+	margin-top: 1vw;
+}
+.leftHalf{
+	width: 50%;
+	float: left;
+}
+.try{
+	font-size: 1vw;
+	margin-bottom: .5vw;
+	margin-top: 1vw;
+}
+.subjectsTry{
+	width: 48%;
+	background-color: red;
+	border: solid;
+	float: left;
+	margin-right: .5vw;
+	margin-bottom: .5vw;
+	border: none;
+	border-radius: .5vw;
+	padding: .5vw;
+	padding-bottom: 2vw;
+	cursor: pointer;
+}
+.subjectName{
+	font-size: 2vw;
+	color: white;
+	
+}
+.difficulty, .numberOfQuestions{
+	font-size: 1vw;
+}
+.difficulty{
+	color: var(--uiColor);
+}
+#oneTry{
+	background-color: var(--subject1Color);
+}
+#oneTry:hover{
+	background-color: var(--hover1Color);
+}
+#twoTry{
+	background-color: var(--subject2Color);
+}
+#twoTry:hover{
+	background-color: var(--hover2Color);
+}
+#threeTry{
+	background-color: var(--subject3Color);
+}
+#threeTry:hover{
+	background-color: var(--hover3Color);
+}
+#fourTry{
+	background-color: var(--subject4Color);
+}
+#fourTry:hover{
+	background-color: var(--hover4Color);
+}
+.rightHalf{
+	width: 50%;
+	float: left;
+}
+.leaderBoardtable{
+	width: 100%;
+	background-color: blue;
+	margin-top: 1vw;
+	background-color: #6900d2;
+	font-size: 1vw;
+	text-align: center;
+	color: white;
+}
+.headMini{
+	width: 25%;
+	border-right: 1px;
+	text-align: center;
+	background-color: #8000ff;
+	color: white;
+	border-right: solid;
+	border-color: white;
+	border-width: 1px;
+	padding:.2vw;
+}
+.borderRight{
+	border-right:solid;
+	border-color: #6900d2;
+	border-width: 1px;
+}
+.borderLeft{
+	border-left:solid;
+	border-left-color: #6900d2;
+	border-width: 1px;
+}
+.borderBottom{
+	border-bottom:solid;
+	border-bottom-color: #6900d2;
+	border-width: 1px;
+}
+.summaryRowMini{
+	background-color: inherit;
+	color: black;
+	padding:.2vw;
+}
+
+
+
 
 
 

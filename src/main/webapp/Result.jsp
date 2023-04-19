@@ -77,6 +77,104 @@
 					<div class="statsSummary summaryRow odd">Statistics</div>
 				</div>
 			</div>
+			<div class=othersCon>
+				<div class="leftHalf">
+					<div class=try>
+						You might wanna try:
+					</div>
+					<div class="subjectsTry" id="oneTry">
+						<div class="subjectName">History</div>
+						<div class="difficulty">Easy</div>
+						<div class="numberOfQuestions">5 Questions</div>
+					</div>
+					<div class="subjectsTry" id="twoTry">
+						<div class="subjectName">History</div>
+						<div class="difficulty">Easy</div>
+						<div class="numberOfQuestions">5 Questions</div>
+					</div>
+					<div class="subjectsTry" id="threeTry">
+						<div class="subjectName">History</div>
+						<div class="difficulty">Easy</div>
+						<div class="numberOfQuestions">5 Questions</div>
+					</div>
+					<div class="subjectsTry" id="fourTry">
+						<div class="subjectName">History</div>
+						<div class="difficulty">Easy</div>
+						<div class="numberOfQuestions">5 Questions</div>
+					</div>
+				</div>
+				<div class="rightHalf">
+					<div class=leaderBoardtable>
+					Leader Board
+					</div>
+					<div class="flexOuter">
+						<div class=" headMini borderLeft">Subject</div>
+						<div class=" headMini">Name</div>
+						<div class=" headMini">Score</div>
+						<div class=" headMini borderRight" >Date</div>
+					</div>
+					<div class="odd flexOuter">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+					<div class="even flexOuter">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+					<div class="odd flexOuter">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+					<div class="even flexOuter">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+					<div class="odd flexOuter">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+					<div class="even flexOuter">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+					<div class="odd flexOuter">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+					<div class="even flexOuter">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+					<div class="odd flexOuter">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+					<div class="even flexOuter borderBottom">
+						<div class=" headMini summaryRowMini borderLeft">History</div>
+						<div class=" headMini summaryRowMini">Angelo</div>
+						<div class=" headMini summaryRowMini">100</div>
+						<div class=" headMini summaryRowMini borderRight">19-4-2023</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div> 
 </body>

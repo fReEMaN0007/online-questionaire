@@ -63,10 +63,10 @@ function correctAns(ans,corretAns,qst){
 		
 		
 	if(ans==corretAns){
-		document.getElementById("choice"+corretAns+qst).style.backgroundColor= "#00ff1e";
-		document.getElementById("choice"+corretAns+qst).style.color= "blue";
+		document.getElementById("choice"+corretAns+qst).style.backgroundColor= "green";
+		document.getElementById("choice"+corretAns+qst).style.color= "white";
 		document.getElementById("checkerMessage").innerHTML= "Correct!";
-		document.getElementById("checkerMessage").style.backgroundColor= "#00ff1e";
+		document.getElementById("checkerMessage").style.backgroundColor= "green";
 		document.getElementById("ans"+qst).value="correct";
 		score=score +1;
 		document.getElementById("score").value = score;
@@ -79,11 +79,12 @@ function correctAns(ans,corretAns,qst){
 	
 	}
 	else{
-		document.getElementById("choice"+ans+qst).style.backgroundColor= "red";
-		document.getElementById("choice"+corretAns+qst).style.backgroundColor= "#00ff1e";
-		document.getElementById("choice"+corretAns+qst).style.color= "blue";
+		document.getElementById("choice"+ans+qst).style.backgroundColor= "maroon";
+		document.getElementById("choice"+ans+qst).style.color= "white";
+		document.getElementById("choice"+corretAns+qst).style.backgroundColor= "green";
+		document.getElementById("choice"+corretAns+qst).style.color= "white";
 		document.getElementById("checkerMessage").innerHTML= "Wrong!";
-		document.getElementById("checkerMessage").style.backgroundColor= "red";
+		document.getElementById("checkerMessage").style.backgroundColor= "maroon";
 		document.getElementById("score").value = score;
 	}
 
