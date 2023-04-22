@@ -21,13 +21,13 @@ public class Question {
 		
 	}
 	
-	public ModelAndView insertData(int questionNumber, String subject, String person) {
+	public ModelAndView insertData(int questionNumber, String subject, String name) {
 		ModelAndView mv = new ModelAndView();
 		
 		
 
 		mv.addObject("subject",subject);
-		mv.addObject("person",person);
+		mv.addObject("name",name);
 		mv.addObject("question",questioinPackage.get(subject).get("question"));
 		mv.addObject("choice",questioinPackage.get(subject).get("choice"));
 		mv.addObject("answer",questioinPackage.get(subject).get("answer"));

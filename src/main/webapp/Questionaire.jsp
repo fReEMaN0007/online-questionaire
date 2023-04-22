@@ -9,7 +9,7 @@
 <title>Online Survey</title>
 </head>
 
-<body>
+<body onload="uiColorSelector(' ${subject}')">
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.util.HashMap"%>
 <%! HashMap<String, HashMap<String,ArrayList<String>>>  questions;%>
@@ -101,7 +101,7 @@
 		</div>
 		
 		<div id="quizSummary">
-				<span id="congrats"></span> ${person}!
+				<span id="congrats"></span> ${name}!
 				<div id="spacer"></div>
 				Your score is <span id="scoreVar"></span> out of 5.
 		</div>

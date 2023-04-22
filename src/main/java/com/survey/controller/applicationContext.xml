@@ -15,10 +15,10 @@
     	<constructor-arg>
 				<map value-type="java.lang.Integer">
 					<entry key="History" value="1" />
-					<entry key="Math" value="2" />
+					<entry key="English" value="2" />
 					<entry key="Science" value="3" />
-					<entry key="Logic" value="4" />
-					<entry key="English" value="5" />
+					<entry key="Math" value="4" />
+					<entry key="Logic" value="5" />
 					
 					<entry key="Elementary" value="1" />
 					<entry key="High School" value="2" />
@@ -140,6 +140,12 @@
 	    <entry key="ans3" value="C" />
 	    <entry key="ans4" value="B" />
 	    <entry key="ans5" value="C" />
+	    
+	    <entry key="ans1Text" value="B. The Sun" />
+	    <entry key="ans2Text" value="B. Speed of light" />
+	    <entry key="ans3Text" value="C. Red Giant" />
+	    <entry key="ans4Text" value="B. Gallelli Galileo" />
+	    <entry key="ans5Text" value="C. Jupiter" />
 	</util:map>
 	
 	<util:map id="scienceChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">
@@ -275,6 +281,12 @@
 	    <entry key="ans3" value="D" />
 	    <entry key="ans4" value="B" />
 	    <entry key="ans5" value="B" />
+	    
+	    <entry key="ans1Text" value="A. 36" />
+	    <entry key="ans2Text" value="B. 204" />
+	    <entry key="ans3Text" value="D. 45 years" />
+	    <entry key="ans4Text" value="B. 2 km/hr" />
+	    <entry key="ans5Text" value="B. 22" />
 	</util:map>
 	
 	<util:map id="mathChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">
@@ -339,6 +351,12 @@
 	    <entry key="ans3" value="D" />
 	    <entry key="ans4" value="C" />
 	    <entry key="ans5" value="B" />
+	    
+	    <entry key="ans1Text" value="C. he has been working" />
+	    <entry key="ans2Text" value="A. pedestrian" />
+	    <entry key="ans3Text" value="D. to give a false alarm" />
+	    <entry key="ans4Text" value="C. Either A or B" />
+	    <entry key="ans5Text" value="B. in, on" />
 	</util:map>
 	
 	<util:map id="englishChoices" key-type="java.lang.String" value-type="java.util.LinkedHashMap">
