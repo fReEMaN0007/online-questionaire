@@ -12,7 +12,7 @@
 <body onload="percentBar();setTryBox('${subject}');uiColorSelector('${subject}')">
 	${ans}
 	<div class="mainCon">
-		<div class="title">	
+		<div class="title" id="titleResult">	
 			Quiz Summary & Statistics
 		</div>
 		<div id="dataCon">
@@ -114,22 +114,22 @@
 					<div class=try>
 						You might wanna try:
 					</div>
-					<div class="subjectsTry" id="Try1">
+					<div class="subjectsTry" id="Try1" onclick="tryAnother(1, '${name}', '${education}')">
 						<div class="subjectName" id="subjectName1">f</div>
 						<div class="difficulty">Easy</div>
 						<div class="numberOfQuestions">5 Questions</div>
 					</div>
-					<div class="subjectsTry" id="Try2">
+					<div class="subjectsTry" id="Try2" onclick="tryAnother(2, '${name}', '${education}')">
 						<div class="subjectName" id="subjectName2">History</div>
 						<div class="difficulty">Easy</div>
 						<div class="numberOfQuestions">5 Questions</div>
 					</div>
-					<div class="subjectsTry" id="Try3">
+					<div class="subjectsTry" id="Try3" onclick="tryAnother(3, '${name}', '${education}')">
 						<div class="subjectName" id="subjectName3">History</div>
 						<div class="difficulty">Easy</div>
 						<div class="numberOfQuestions">5 Questions</div>
 					</div>
-					<div class="subjectsTry" id="Try4">
+					<div class="subjectsTry" id="Try4" onclick="tryAnother(4, '${name}', '${education}')">
 						<div class="subjectName" id="subjectName4">History</div>
 						<div class="difficulty">Easy</div>
 						<div class="numberOfQuestions">5 Questions</div>

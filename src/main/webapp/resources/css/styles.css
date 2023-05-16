@@ -113,17 +113,21 @@
     width: 80%;
     display: block;
     margin: auto;
-    background-color: aliceblue;
+
   
 }
 .title{
     width: 80%;
     margin: auto;
+    margin-top: 10vw;
     background-color: var(--uiColor);
     font-size: 5vw;
     text-align: center;
     color: white;
 	
+}
+#titleResult{
+	margin-top:0;
 }
 .question{
     width: 80%;

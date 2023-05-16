@@ -169,3 +169,17 @@ function setTryBox(subject){
 	}
 	
 }
+function tryAnother(number, name, education){
+	var subject;
+	switch (number){
+		case 1 : subject=document.getElementById("subjectName1").innerHTML;
+		break;
+		case 2 : subject=document.getElementById("subjectName2").innerHTML;
+		break;
+		case 3 : subject=document.getElementById("subjectName3").innerHTML;
+		break;
+		case 4 : subject=document.getElementById("subjectName4").innerHTML;
+		break;	
+	}
+	 window.location = "question1?name="+name+"&education="+education+"&subject="+subject+"";
+}
